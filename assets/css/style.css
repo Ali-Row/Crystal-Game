@@ -1,15 +1,23 @@
 * {
-	color: antiquewhite;
+	color: rgb(255, 255, 255);
 }
 body {
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 }
-
+h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 4rem;
+}
+li, span {
+	color: #6C757D;
+}
+.content-wrapper {
+	max-width: 650px;
+}
 .gemImage {
 	max-width: 8em;
-	margin: 0% auto;
 	border-radius: 100%;
 	padding: 20px
 }

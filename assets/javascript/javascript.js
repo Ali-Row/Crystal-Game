@@ -1,55 +1,51 @@
 $(document).ready(function () {
-  var Random = Math.floor(Math.random() * 101 + 19)
+  let Random = Math.floor(Math.random() * 101 + 19)
   // Selects a random number to be shown at the start of the game
   // Number will be between 19 - 120
   //
-  $('#randomNumber').text(Random);
+  $('#randomNumber').text("Number To Get: " + Random);
   // Appending random number to the randomNumber id in the html doc
   //
-  var num1 = Math.floor(Math.random() * 11 + 1)
-  var num2 = Math.floor(Math.random() * 11 + 1)
-  var num3 = Math.floor(Math.random() * 11 + 1)
-  var num4 = Math.floor(Math.random() * 11 + 1)
-  // Setting up random numbers for each crystal
-  // Random number has to be between 1 - 12
-  // 
-  var userTotal = 0;
-  var wins = 0;
-  var losses = 0;
+  let num1 = Math.floor(Math.random() * 11 + 1)
+  let num2 = Math.floor(Math.random() * 11 + 1)
+  let num3 = Math.floor(Math.random() * 11 + 1)
+  let num4 = Math.floor(Math.random() * 11 + 1)
+ 
+  let userTotal = 0;
+  let wins = 0;
+  let losses = 0;
   //  Decaring variables for tallies
-  $('#numberWins').text(wins);
-  $('#numberLosses').text(losses);
+  $('#numberWins').text("Wins: " + wins);
+  $('#numberLosses').text("Losses: " + losses);
   //resets the game
   function reset() {
     Random = Math.floor(Math.random() * 101 + 19);
-    console.log(Random)
-    $('#randomNumber').text(Random);
+    $('#randomNumber').text("Number To Get: " + Random);
     num1 = Math.floor(Math.random() * 11 + 1);
     num2 = Math.floor(Math.random() * 11 + 1);
     num3 = Math.floor(Math.random() * 11 + 1);
     num4 = Math.floor(Math.random() * 11 + 1);
     userTotal = 0;
-    $('#total').text(userTotal);
+    $('#total').text("Your Total is: " + userTotal);
   }
   //adds the wins to the userTotal
   function yay() {
     alert("You Win!");
     wins++;
-    $('#numberWins').text(wins);
+    $('#numberWins').text("Wins: " + wins);
     reset();
   }
   //adds the losses to the userTotal
   function loser() {
     alert("You Lose!");
     losses++;
-    $('#numberLosses').text(losses);
+    $('#numberLosses').text("Losses: " + losses);
     reset()
   }
   //sets up click for jewels
   $('#one').on('click', function () {
     userTotal = userTotal + num1;
-    console.log("New userTotal= " + userTotal);
-    $('#total').text(userTotal);
+    $('#total').text("Your Total is: " + userTotal);
     //sets win/lose conditions
     if (userTotal == Random) {
       yay();
@@ -60,8 +56,7 @@ $(document).ready(function () {
   })
   $('#two').on('click', function () {
     userTotal = userTotal + num2;
-    console.log("New userTotal= " + userTotal);
-    $('#total').text(userTotal);
+    $('#total').text("Your Total is: " + userTotal);
     if (userTotal == Random) {
       yay();
     }
@@ -71,8 +66,7 @@ $(document).ready(function () {
   })
   $('#three').on('click', function () {
     userTotal = userTotal + num3;
-    console.log("New userTotal= " + userTotal);
-    $('#total').text(userTotal);
+    $('#total').text("Your Total is: " + userTotal);
     //sets win/lose conditions
     if (userTotal == Random) {
       yay();
@@ -83,8 +77,7 @@ $(document).ready(function () {
   })
   $('#four').on('click', function () {
     userTotal = userTotal + num4;
-    console.log("New userTotal= " + userTotal);
-    $('#total').text(userTotal);
+    $('#total').text("Your Total is: " + userTotal);
 
     if (userTotal == Random) {
       yay();
