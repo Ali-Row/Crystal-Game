@@ -1,92 +1,77 @@
+* {
+	color: antiquewhite;
+}
 body {
-	background-image: url("../images/Background.jpg")
-}
-
-div {
-	background-color: #ffffff;
-	margin: 15px;
-	width: 25%
-}
-
-div {
-	padding: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-h1, h2, h3, span {
-	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1 {
-	font-size: 35pt;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#blue {
-	color: #3092c7;
-}
-
-#green {
-	color: #00aa59;
-}
-
-#red {
-	color: #ec4b5f;
-}
-
-#yellow {
-	color: #ffc225;
-}
-
-ol {
-	list-style: decimal inside; 
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-ul {
-	list-style: disc inside;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	text-indent: 20px;
-}
-
-div.header, div.gems {
-	background-color: #e0e0eb;
-}
-
-div.header, div.instructions{
-	width: 50%;
-}
-
-.instructions {
-	padding: 30px;
-}
-
-.numberToMatch, .winsAndLosses{
-	float: left;
-	width: 15%;
-	height: 60px;
-}
-.total {
-	width: 15%;
-	height: 60px;
-}
-
-.gems {
-	clear: both;
-}
-
-#one, #two, #three, #four {
-	width: 60px;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 .gemImage {
-	height: 65px;
-	margin: 10px;
-	margin-left: 19px;
-	border: solid rgb(155, 155, 155);
+	max-width: 110px;
+	margin: 0% auto;
 }
 
-.gemImage:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================== */
+
+/* Style the video: 100% width and height to cover the entire window */
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ======================================= */
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+      width: auto;
+      height: 100%;
+    }
   }
