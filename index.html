@@ -21,30 +21,36 @@
 		</video>
 	</div>
 
-		<h1 class="text-center">Star Gem</h1>
-
+<h1 class="text-center">Star Gem</h1>
+	<br>
 <div class="content-wrapper mx-auto">
-	<div class="instructions">
-		<h4 class="text-center">Here's how to play</h4>
-		</br>
-		<ul class="">
-			<li>You will be given a random number at the start of the game.<span> "Number To Get"</span></li>
-			<li>There are four crystals below</li>
-			<li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
-			<li>You win the game by matching your total score to the random number.</li>
-			<li>You lose the game if your total score goes above the random number.</li>
-			<li>The value of each crystal is hidden from you until you click on it.</li>
-			<li>Each time when the game starts, the game will change the values of each crystal.</li>
-		</ul>
-	</div>
+	<div class="container text-center">
+		<button type="button" class="btn btn-secondary rounded-0" data-toggle="modal" data-target=".bd-example-modal-lg">Here's how to play</button>
+			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  				<div class="modal-dialog modal-lg">
+   					<div class="modal-content rounded-0 p-5">
+						<ul>
+							<li>You will be given a random number at the start of the game.<span> "Number To Get"</span></li>
+							<li>There are four crystals below</li>
+							<li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+							<li>You win the game by matching your total score to the random number.</li>
+							<li>You lose the game if your total score goes above the random number.</li>
+							<li>The value of each crystal is hidden from you until you click on it.</li>
+							<li>Each time when the game starts, the game will change the values of each crystal.</li>
+						</ul>
+    				</div>
+  				</div>
+			</div>
+		</div>	
+</br>
 	<div class="row text-center">
 		<div class="col-sm-6 p-3">
-				<h4 id="randomNumber">Number To Get: </h4>	
-				<h4 id="total">Your Total is: 0</h4>
+			<h4 id="randomNumber">Number To Get:</h4>	
+			<h4 id="total">Your Total is: 0</h4>
 		</div>
 		<div class="col-sm-6 p-3">
-				<h4 id="numberWins">Wins: 0</h4>
-				<h4 id="numberLosses">Losses: 0</h4>
+			<h4 id="numberWins">Wins: 0</h4>
+			<h4 id="numberLosses">Losses: 0</h4>
 		</div>
 	</div>
 		

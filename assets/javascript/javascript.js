@@ -1,11 +1,10 @@
 $(document).ready(function () {
+
   let Random = Math.floor(Math.random() * 101 + 19)
-  // Selects a random number to be shown at the start of the game
   // Number will be between 19 - 120
-  //
   $('#randomNumber').text("Number To Get: " + Random);
   // Appending random number to the randomNumber id in the html doc
-  //
+
   let num1 = Math.floor(Math.random() * 11 + 1)
   let num2 = Math.floor(Math.random() * 11 + 1)
   let num3 = Math.floor(Math.random() * 11 + 1)
@@ -14,6 +13,7 @@ $(document).ready(function () {
   let userTotal = 0;
   let wins = 0;
   let losses = 0;
+
   //  Decaring variables for tallies
   $('#numberWins').text("Wins: " + wins);
   $('#numberLosses').text("Losses: " + losses);

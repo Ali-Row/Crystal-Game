@@ -10,8 +10,21 @@ h1 {
   font-family: 'Righteous', cursive;
   font-size: 4rem;
 }
+button {
+  background: none !important;
+  border: solid white !important;
+}
+button:hover {
+  background: white !important;
+  border: solid white !important;
+  color: black !important;
+}
+.modal-content {
+  background: rgba(191, 200, 207, 0.966);
+}
 li, span {
-	color: #6C757D;
+  color: rgb(0, 0, 0);
+  padding: 4px;
 }
 .content-wrapper {
 	max-width: 650px;
@@ -37,35 +50,6 @@ li, span {
     -webkit-box-shadow: 0 0 30px 0 rgba(162, 82, 228, 0.4);
     box-shadow: 0 0 10px 0 rgba(153, 72, 228, 0.4), inset 0 0 110px 0 rgba(170, 75, 224, 0.4);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ================================== */
 
 /* Style the video: 100% width and height to cover the entire window */
 .fullscreen-bg {
