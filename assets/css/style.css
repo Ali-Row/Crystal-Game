@@ -8,8 +8,26 @@ body {
 }
 
 .gemImage {
-	max-width: 110px;
+	max-width: 8em;
 	margin: 0% auto;
+	border-radius: 100%;
+	padding: 20px
+}
+#one:hover {
+    -webkit-box-shadow: 0 0 30px 0 rgba(145, 147, 255, 0.4);
+    box-shadow: 0 0 10px 0 rgba(143, 141, 255, 0.4), inset 0 0 110px 0 rgba(105, 107, 255, 0.4);
+}
+#two:hover {
+    -webkit-box-shadow: 0 0 30px 0 rgba(83, 221, 102, 0.4);
+    box-shadow: 0 0 10px 0 rgba(83, 224, 101, 0.4), inset 0 0 110px 0 rgba(72, 187, 82, 0.4);
+}
+#three:hover {
+    -webkit-box-shadow: 0 0 30px 0 rgba(235, 84, 84, 0.4);
+    box-shadow: 0 0 10px 0 rgba(235, 133, 133, 0.4), inset 0 0 110px 0 rgba(255, 123, 123, 0.4);
+}
+#four:hover {
+    -webkit-box-shadow: 0 0 30px 0 rgba(162, 82, 228, 0.4);
+    box-shadow: 0 0 10px 0 rgba(153, 72, 228, 0.4), inset 0 0 110px 0 rgba(170, 75, 224, 0.4);
 }
 
 
