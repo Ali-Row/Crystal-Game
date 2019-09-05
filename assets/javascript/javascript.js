@@ -1,15 +1,11 @@
 $(document).ready(function () {
 
   let Random = Math.floor(Math.random() * 101 + 19)
-  // Number will be between 19 - 120
   $('#randomNumber').text("Number To Get: " + Random);
-  // Appending random number to the randomNumber id in the html doc
-
   let num1 = Math.floor(Math.random() * 11 + 1)
   let num2 = Math.floor(Math.random() * 11 + 1)
   let num3 = Math.floor(Math.random() * 11 + 1)
   let num4 = Math.floor(Math.random() * 11 + 1)
- 
   let userTotal = 0;
   let wins = 0;
   let losses = 0;
