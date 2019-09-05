@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+  // $("#startGame").click(function(){
+  //   $("#startGame").hide();
+  // });
+
+
+
+
   let Random = Math.floor(Math.random() * 101 + 19)
   $('#randomNumber').text("Number To Get: " + Random);
   let num1 = Math.floor(Math.random() * 11 + 1)
@@ -10,9 +17,6 @@ $(document).ready(function () {
   let wins = 0;
   let losses = 0;
 
-  //  Decaring variables for tallies
-  $('#numberWins').text("Wins: " + wins);
-  $('#numberLosses').text("Losses: " + losses);
   //resets the game
   function reset() {
     Random = Math.floor(Math.random() * 101 + 19);
@@ -43,6 +47,7 @@ $(document).ready(function () {
     userTotal = userTotal + num1;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound1")[0].play();
+    $("#theme")[0].play();
     //sets win/lose conditions
     if (userTotal == Random) {
       yay();
@@ -55,6 +60,7 @@ $(document).ready(function () {
     userTotal = userTotal + num2;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound2")[0].play();
+    $("#theme")[0].play();
     if (userTotal == Random) {
       yay();
     }
@@ -66,6 +72,7 @@ $(document).ready(function () {
     userTotal = userTotal + num3;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound3")[0].play();
+    $("#theme")[0].play();
     if (userTotal == Random) {
       yay();
     }
@@ -77,6 +84,7 @@ $(document).ready(function () {
     userTotal = userTotal + num4;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound4")[0].play();
+    $("#theme")[0].play();
     if (userTotal == Random) {
       yay();
     }
@@ -84,4 +92,5 @@ $(document).ready(function () {
       loser();
     }
   });
+
 }); 
