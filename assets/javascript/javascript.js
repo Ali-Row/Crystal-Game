@@ -30,14 +30,14 @@ $(document).ready(function () {
   }
   //adds the wins to the userTotal
   function yay() {
-    alert("You Win!");
+    $("#winSound")[0].play();
     wins++;
     $('#numberWins').text("Wins: " + wins);
     reset();
   }
   //adds the losses to the userTotal
   function loser() {
-    alert("You Lose!");
+    $("#loseSound")[0].play();
     losses++;
     $('#numberLosses').text("Losses: " + losses);
     reset()
@@ -46,6 +46,7 @@ $(document).ready(function () {
   $('#one').on('click', function () {
     userTotal = userTotal + num1;
     $('#total').text("Your Total is: " + userTotal);
+    $("#gemSound1")[0].play();
     //sets win/lose conditions
     if (userTotal == Random) {
       yay();
@@ -57,6 +58,7 @@ $(document).ready(function () {
   $('#two').on('click', function () {
     userTotal = userTotal + num2;
     $('#total').text("Your Total is: " + userTotal);
+    $("#gemSound2")[0].play();
     if (userTotal == Random) {
       yay();
     }
@@ -67,7 +69,7 @@ $(document).ready(function () {
   $('#three').on('click', function () {
     userTotal = userTotal + num3;
     $('#total').text("Your Total is: " + userTotal);
-    //sets win/lose conditions
+    $("#gemSound3")[0].play();
     if (userTotal == Random) {
       yay();
     }
@@ -78,7 +80,7 @@ $(document).ready(function () {
   $('#four').on('click', function () {
     userTotal = userTotal + num4;
     $('#total').text("Your Total is: " + userTotal);
-
+    $("#gemSound4")[0].play();
     if (userTotal == Random) {
       yay();
     }
