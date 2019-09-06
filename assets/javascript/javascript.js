@@ -1,96 +1,91 @@
 $(document).ready(function () {
 
-  // $("#startGame").click(function(){
-  //   $("#startGame").hide();
-  // });
+  let target = Math.floor(Math.random() * 101 + 19),
+      gem1 = Math.floor(Math.random() * 11 + 1),
+      gem2 = Math.floor(Math.random() * 11 + 1),
+      gem3 = Math.floor(Math.random() * 11 + 1),
+      gem4 = Math.floor(Math.random() * 11 + 1),
+      userTotal = 0,
+      wins = 0,
+      losses = 0;
 
-
-
-
-  let Random = Math.floor(Math.random() * 101 + 19)
-  $('#randomNumber').text("Number To Get: " + Random);
-  let num1 = Math.floor(Math.random() * 11 + 1)
-  let num2 = Math.floor(Math.random() * 11 + 1)
-  let num3 = Math.floor(Math.random() * 11 + 1)
-  let num4 = Math.floor(Math.random() * 11 + 1)
-  let userTotal = 0;
-  let wins = 0;
-  let losses = 0;
-
-  //resets the game
+  $('#randomNumber').text("Number To Get: " + target);
+  //Callback function to play theme song
+  function theme() {
+    $("#theme")[0].play();
+  } 
+  //Resets the game
   function reset() {
-    Random = Math.floor(Math.random() * 101 + 19);
-    $('#randomNumber').text("Number To Get: " + Random);
-    num1 = Math.floor(Math.random() * 11 + 1);
-    num2 = Math.floor(Math.random() * 11 + 1);
-    num3 = Math.floor(Math.random() * 11 + 1);
-    num4 = Math.floor(Math.random() * 11 + 1);
+    target = Math.floor(Math.random() * 101 + 19);
+    $('#randomNumber').text("Number To Get: " + target);
+    gem1 = Math.floor(Math.random() * 11 + 1);
+    gem2 = Math.floor(Math.random() * 11 + 1);
+    gem3 = Math.floor(Math.random() * 11 + 1);
+    gem4 = Math.floor(Math.random() * 11 + 1);
     userTotal = 0;
     $('#total').text("Your Total is: " + userTotal);
   }
-  //adds the wins to the userTotal
-  function yay() {
-    $("#winSound")[0].play();
+  //Adds the wins to the wins variable
+  function win() {
     wins++;
+    $("#winSound")[0].play();
     $('#numberWins').text("Wins: " + wins);
     reset();
   }
-  //adds the losses to the userTotal
-  function loser() {
-    $("#loseSound")[0].play();
+  //Adds the losses to the losses variable
+  function lose() {
     losses++;
+    $('#loseSound')[0].play();
     $('#numberLosses').text("Losses: " + losses);
     reset()
   }
-  //sets up click for jewels
+  //Sets up click for gems
   $('#one').on('click', function () {
-    userTotal = userTotal + num1;
+    userTotal = userTotal + gem1;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound1")[0].play();
-    $("#theme")[0].play();
-    //sets win/lose conditions
-    if (userTotal == Random) {
-      yay();
+    theme();
+    if (userTotal == target) {
+      win();
     }
-    else if (userTotal > Random) {
-      loser();
+    else if (userTotal > target) {
+      lose();
     }
   })
   $('#two').on('click', function () {
-    userTotal = userTotal + num2;
+    userTotal = userTotal + gem2;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound2")[0].play();
-    $("#theme")[0].play();
-    if (userTotal == Random) {
-      yay();
+    theme();
+    if (userTotal == target) {
+      win();
     }
-    else if (userTotal > Random) {
-      loser();
+    else if (userTotal > target) {
+      lose();
     }
   })
   $('#three').on('click', function () {
-    userTotal = userTotal + num3;
+    userTotal = userTotal + gem3;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound3")[0].play();
-    $("#theme")[0].play();
-    if (userTotal == Random) {
-      yay();
+    theme();
+    if (userTotal == target) {
+      win();
     }
-    else if (userTotal > Random) {
-      loser();
+    else if (userTotal > target) {
+      lose();
     }
   })
   $('#four').on('click', function () {
-    userTotal = userTotal + num4;
+    userTotal = userTotal + gem4;
     $('#total').text("Your Total is: " + userTotal);
     $("#gemSound4")[0].play();
-    $("#theme")[0].play();
-    if (userTotal == Random) {
-      yay();
+    theme();
+    if (userTotal == target) {
+      win();
     }
-    else if (userTotal > Random) {
-      loser();
+    else if (userTotal > target) {
+      lose();
     }
   });
-
 }); 
