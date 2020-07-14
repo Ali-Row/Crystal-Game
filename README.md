@@ -4,3 +4,4 @@ This is my crystal game I made during the Richmond Coding Bootcamp, you get a ra
 Fun fact about this one, I made the sounds myself in FL Studio, I've been trying to keep my audio background alive!
 
 **LIVE DEMO: https://ali-row.github.io/Crystal-Game/**
+ 
